@@ -25,7 +25,7 @@ Import-CSV -Path C:\users.csv -Header Name | foreach {
         Remove-Item -path "C:\Users\$($_.Name)\AppData\Local\Google\Chrome\User Data\Default\Media Cache" -Recurse -Force -EA SilentlyContinue -Verbose
         Remove-Item -path "C:\Users\$($_.Name)\AppData\Local\Google\Chrome\User Data\Default\Cookies-Journal" -Recurse -Force -EA SilentlyContinue -Verbose
         Remove-Item -Path "C:\Users\$($_.Name)\AppData\Local\Google\Chrome\User Data\Default\Network\cookies" -Force -EA SilentlyContinue -Verbose 
-		Remove-Item -Path "C:\Users\$($_.Name)\AppData\Local\Google\Chrome\User Data\Default\History" -Force -EA SilentlyContinue -Verbose
+	Remove-Item -Path "C:\Users\$($_.Name)\AppData\Local\Google\Chrome\User Data\Default\History" -Force -EA SilentlyContinue -Verbose
 }        
 	#delete temp file
 	Remove-Item C:\users.csv
